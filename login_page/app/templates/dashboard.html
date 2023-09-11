@@ -1,0 +1,23 @@
+<!-- accounts/templates/accounts/dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <p>Welcome to your dashboard, <b>{{ user.username }}</b>!</p>
+    {% for i in codes %}
+    <p>Referral Code is : <b>{{ i.code }}</b></p>
+    {% endfor %}
+
+</body>
+<script>
+    {% if messages %}
+        {% for i in messages %}
+            window.alert('{{i}}')
+        {% endfor %}
+    {% endif %}
+</script>
+</html>
